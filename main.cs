@@ -7,35 +7,47 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            double number = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(GetDay(30));
 
-            Console.Write("Enter a symbol: ");
-            string symbol = Console.ReadLine();
+        }
+        static string GetDay(int dayNum) {
+            string dayName;
 
-            Console.Write("Enter a number: ");
-            double number2 = Convert.ToDouble(Console.ReadLine());
+            switch(dayNum) {
+                case 0 :
+                    dayName = "Sunday";
+                    break;
 
-            if (symbol == "+")
-            {
-                Console.WriteLine(number + number2);
+                case 1 :
+                    dayName = "Monday";
+                    break;
+
+                case 2 :
+                    dayName = "Tuesday";
+                    break;
+                
+                case 3 :
+                    dayName = "Wednesday";
+                    break;
+
+                case 4 :
+                    dayName = "Thursday";
+                    break;
+
+                case 5 :
+                    dayName = "Friday";
+                    break;
+
+                case 6 :
+                    dayName = "Saturday";
+                    break;
+                default :
+                    dayName = "Invalid Day Number";
+                    break;
+
             }
-            else if (symbol == "-")
-            {
-                Console.WriteLine(number - number2);
-            }
-            else if (symbol == "*")
-            {
-                Console.WriteLine(number * number2);
-            }
-            else if (symbol == "/")
-            {
-                Console.WriteLine(number / number2);
-            }
-            else
-            {
-                Console.WriteLine("Invalid symbol");
-            }
+
+            return dayName;
         }
     }
 }
